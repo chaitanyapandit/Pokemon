@@ -1,0 +1,114 @@
+# User-specific files
+.DS_Store
+*.swp
+*.swo
+
+# Swift Package Manager
+.build/
+Packages
+.swiftpm/xcode/package.xcworkspace/contents.xcworkspacedata
+.swiftpm/xcode/package.xcworkspace/xcshareddata
+.swiftpm/xcode/package.xcworkspace/xcuserdata
+
+# Xcode
+# .xcworkspace - If you're using xcworkspace file for workspace management
+*.xcworkspace/
+# Shared data
+xcuserdata/
+# Scheme management
+*.xcscheme
+*.xcodeproj/project.xcworkspace/
+*.xcodeproj/project.xcworkspace/xcuserdata/
+*.xcodeproj/project.xcworkspace/xcshareddata/
+*.xcodeproj/xcuserdata/
+# Other Xcode specific files
+*.xccheckout
+*.moved-aside
+DerivedData/
+*.hmap
+*.ipa
+*.xcuserstate
+
+# Playgrounds
+timeline.xctimeline
+playground.xcworkspace
+
+# SwiftUI Previews
+.swiftpm/repositories
+.swiftpm/Build
+.swiftpm/cache
+.swiftpm/indices
+
+# macOS
+*.plist
+*.dSYM
+*.xcodeproj/xcuserdata
+
+# Cocoapods
+Pods/
+
+# Carthage
+Carthage/Build/
+
+# Fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/**/*.png
+fastlane/test_output
+
+# Code coverage
+*.xcresult
+*.profdata
+
+# Generated files
+*.g.*
+*.swiftmodule
+*.swiftsourceinfo
+*.pcm
+*.o
+*.d
+*.dia
+
+# Build artifacts
+build/
+Build/
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.crash
+*.log
+*.recovery
+
+# App Specific
+appname.xcodeproj/
+appname.xcworkspace/
+
+# SwiftLint
+.swiftlint.yml
+.swiftlint.autocorrect.yml
+
+# Jazzy Documentation
+docs/
+
+# SourceKit-LSP
+.sourcekit-lsp
+
+# Editor
+.idea/
+.vscode/
+
+# Bundler
+Gemfile.lock
+.bundle/
+
+# Firebase
+GoogleService-Info.plist
+
+# Secrets
+secrets/
+.env
+
+# Other
+Package.resolved
