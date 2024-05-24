@@ -17,6 +17,11 @@ struct Sidebar: View {
             content
         }
         .background(backgroundColor)
+        .onAppear(perform: {
+            #if os(macOS)
+            model.selection = Pokemon.init(name: "bulbasaur", url: "https://pokeapi.co/api/v2/pokemon/1/")
+            #endif
+        })
     }
     
     private var header: some View {
@@ -66,20 +71,15 @@ struct Sidebar: View {
     }
 
     private func pokemonButton(for pokemon: Pokemon) -> some View {
-        Button(action: {
+        let isSelected = model.selection == pokemon
+        return Button(action: {
             model.selection = pokemon
             showSidebar = false
         }) {
             pokemonRow(pokemon)
-                .padding()
-                .background(gradientBackground)
-                .cornerRadius(15)
-                .shadow(color: Color.primary.opacity(0.2), radius: 10, x: 0, y: 5)
-                .padding(.horizontal)
         }
-        #if os(macOS)
-        .buttonStyle(PlainButtonStyle())
-        #endif
+        .buttonStyle(PokemonButtonStyle(isSelected: isSelected))
+        .padding(.horizontal)
     }
 
     private var loader: some View {
@@ -102,14 +102,6 @@ struct Sidebar: View {
                 .textCase(.uppercase)
                 .frame(maxWidth: .infinity, alignment: .leading)
         }
-    }
-
-    private var gradientBackground: LinearGradient {
-        LinearGradient(
-            gradient: Gradient(colors: [Color.purple.opacity(0.3), Color.blue.opacity(0.3)]),
-            startPoint: .leading,
-            endPoint: .trailing
-        )
     }
     
     private var backgroundColor: Color {

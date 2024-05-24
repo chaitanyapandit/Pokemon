@@ -32,6 +32,11 @@ struct DetailView: View {
                     }
                 }
             }
+            .onAppear(perform: {
+                #if os(iOS)
+                selection = Pokemon(name: "bulbasaur", url: "https://pokeapi.co/api/v2/pokemon/1/")
+                #endif
+            })
     }
     
     @ViewBuilder
@@ -115,46 +120,6 @@ struct DetailView: View {
                     .textCase(.uppercase)
                     .foregroundColor(.white)
                 ForEach(abilities, id: \.self) { ability in
-                    Text(ability)
-                        .font(.body)
-                        .textCase(.uppercase)
-                        .foregroundColor(.white)
-                        .padding(5)
-                        .background(Color.orange.opacity(0.7))
-                        .cornerRadius(5)
-                        .padding(.vertical, 2)
-                    Text(ability)
-                        .font(.body)
-                        .textCase(.uppercase)
-                        .foregroundColor(.white)
-                        .padding(5)
-                        .background(Color.orange.opacity(0.7))
-                        .cornerRadius(5)
-                        .padding(.vertical, 2)
-                    Text(ability)
-                        .font(.body)
-                        .textCase(.uppercase)
-                        .foregroundColor(.white)
-                        .padding(5)
-                        .background(Color.orange.opacity(0.7))
-                        .cornerRadius(5)
-                        .padding(.vertical, 2)
-                    Text(ability)
-                        .font(.body)
-                        .textCase(.uppercase)
-                        .foregroundColor(.white)
-                        .padding(5)
-                        .background(Color.orange.opacity(0.7))
-                        .cornerRadius(5)
-                        .padding(.vertical, 2)
-                    Text(ability)
-                        .font(.body)
-                        .textCase(.uppercase)
-                        .foregroundColor(.white)
-                        .padding(5)
-                        .background(Color.orange.opacity(0.7))
-                        .cornerRadius(5)
-                        .padding(.vertical, 2)
                     Text(ability)
                         .font(.body)
                         .textCase(.uppercase)
