@@ -194,3 +194,24 @@ struct ViewHeightKey: PreferenceKey {
         value = max(value, nextValue())
     }
 }
+
+struct DetailViews_Previews: PreviewProvider {
+    static var previews: some View {
+        let mockdetails = PokemonDetailsResponse(abilities: [
+            AbilityWrapper(ability: Ability(name: "Chlorophyll", url: "https://pokeapi.co/api/v2/ability/34/"), 
+                           is_hidden: false,
+                           slot: 1),
+            AbilityWrapper(ability: Ability(name: "Overgrow", url: "https://pokeapi.co/api/v2/ability/65/"), 
+                           is_hidden: false,
+                           slot: 2)
+        ],
+            base_experience: 64,
+            id: 1,
+            name: "bulbasaur")
+        
+        let vm = DetailViewModel()
+        vm.details = mockdetails
+        
+        return DetailView(selection: .constant(Pokemon(name: "bulbasaur", url: "https://pokeapi.co/api/v2/pokemon/1/")), showSideBar: .constant(false), model: vm)
+    }
+}

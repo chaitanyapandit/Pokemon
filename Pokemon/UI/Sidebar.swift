@@ -120,3 +120,11 @@ struct Sidebar: View {
         #endif
     }
 }
+
+struct Sidebar_Previews: PreviewProvider {
+    static var previews: some View {
+        Sidebar(model: SidebarViewModel(), showSidebar: .constant(true))
+    }
+}
+
+
