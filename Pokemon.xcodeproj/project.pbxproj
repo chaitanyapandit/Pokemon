@@ -75,6 +75,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		54467B382C00DA3B008DD1DD /* Sidebar */ = {
+			isa = PBXGroup;
+			children = (
+				54CF23292BFDC174008CA205 /* Sidebar.swift */,
+				54CF232D2BFDC85E008CA205 /* SidebarViewModel.swift */,
+			);
+			path = Sidebar;
+			sourceTree = "<group>";
+		};
+		54467B392C00DA4C008DD1DD /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				54CF232B2BFDC358008CA205 /* DetailView.swift */,
+				54CF233D2BFDFFFA008CA205 /* DetailViewModel.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		54467B3A2C00DA6A008DD1DD /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				A2BA9E1F2C00A08D002262FE /* PokemonButtonStyle.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		54CF23062BFDB258008CA205 = {
 			isa = PBXGroup;
 			children = (
@@ -127,13 +153,11 @@
 		54CF23282BFDC132008CA205 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				54467B382C00DA3B008DD1DD /* Sidebar */,
+				54467B392C00DA4C008DD1DD /* Detail */,
+				54467B3A2C00DA6A008DD1DD /* Common */,
 				54CF23122BFDB258008CA205 /* PokemonApp.swift */,
 				54CF23142BFDB258008CA205 /* ContentView.swift */,
-				54CF23292BFDC174008CA205 /* Sidebar.swift */,
-				54CF232B2BFDC358008CA205 /* DetailView.swift */,
-				54CF232D2BFDC85E008CA205 /* SidebarViewModel.swift */,
-				54CF233D2BFDFFFA008CA205 /* DetailViewModel.swift */,
-				A2BA9E1F2C00A08D002262FE /* PokemonButtonStyle.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
